@@ -1,14 +1,10 @@
+import {CreateUser, createRecordTest} from "../tool/testSteps/testMethods";
+import {userData, web} from "../variables/settings";
 ///<reference types="cypress" />
-const web = 'http://127.0.0.1:8000'
 
 describe('Open the site', () => {
   beforeEach(() => {
-    cy.visit('http://127.0.0.1:8000/')
-    cy.get('[data-toggle=modal]').click()
-    cy.get('#id_email').type('asdsad@gmail.com')
-    cy.get('#id_username').type('asdsad@gmail.com')
-    cy.get('#id_password').type('asd')
-    cy.get('#submitbtn').click()
+    CreateUser(web, userData)
   })
 
   it('Open tool home page', () => {
