@@ -9,7 +9,7 @@ describe('Tool Costs', () => {
     }),
    
    it('Costs Create', () => {
-        cy.visit('https://hammerhead-app-wwgsk.ondigitalocean.app/tool/MyEntities')
+        cy.visit('https://hammerhead-app-wwgsk.ondigitalocean.app/tool/MyEntities') // add comment
 
          MyEntities.allTabs().children().should('have.length',4)
 
